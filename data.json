@@ -1,0 +1,135 @@
+[
+    {
+      "studentId": "S001",
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "major": "Computer Science",
+      "testDate": "2024-07-26",
+      "scores": {
+        "Data Structures and Algorithms": 85,
+        "Object-Oriented Programming": 92,
+        "Database Management": 78,
+        "Web Development": 88
+      },
+      "topicsAttempted": [
+        "Data Structures and Algorithms",
+        "Object-Oriented Programming",
+        "Database Management",
+        "Web Development"
+      ],
+      "totalScore": 343,
+      "grade": "A",
+      "feedback": "Excellent performance overall.  Alice demonstrates strong problem-solving skills and a good understanding of core concepts.",
+      "projects": [
+        {
+          "projectName": "E-commerce Website",
+          "technologiesUsed": ["HTML", "CSS", "JavaScript", "Node.js"]
+        },
+        {
+          "projectName": "Data Analysis Tool",
+          "technologiesUsed": ["Python", "Pandas", "NumPy"]
+        }
+      ],
+      "strongTopics": ["Object-Oriented Programming", "Web Development"],
+      "weakTopics": ["Database Management"],
+      "areasOfErrors": {
+        "Data Structures and Algorithms": ["Linked Lists", "Dynamic Programming"],
+        "Database Management": ["Normalization", "SQL Queries"]
+      }
+    },
+    {
+      "studentId": "S002",
+      "name": "Bob Williams",
+      "email": "bob.williams@example.com",
+      "major": "Information Technology",
+      "testDate": "2024-07-26",
+      "scores": {
+        "Data Structures and Algorithms": 72,
+        "Object-Oriented Programming": 80,
+        "Database Management": 90,
+        "Web Development": 65
+      },
+      "topicsAttempted": [
+        "Data Structures and Algorithms",
+        "Object-Oriented Programming",
+        "Database Management",
+        "Web Development"
+      ],
+      "totalScore": 307,
+      "grade": "B",
+      "feedback": "Bob has a good grasp of database concepts but needs to improve his web development skills. Focus on practicing more coding challenges.",
+      "projects": [
+        {
+          "projectName": "Library Management System",
+          "technologiesUsed": ["Java", "SQL"]
+        }
+      ],
+      "strongTopics": ["Database Management"],
+      "weakTopics": ["Web Development"],
+      "areasOfErrors": {
+        "Web Development": ["JavaScript Frameworks", "Responsive Design"],
+        "Data Structures and Algorithms": ["Graphs"]
+      }
+    },
+    {
+      "studentId": "S003",
+      "name": "Eva Garcia",
+      "email": "eva.garcia@example.com",
+      "major": "Computer Science",
+      "testDate": "2024-07-26",
+      "scores": {
+        "Data Structures and Algorithms": 95,
+        "Object-Oriented Programming": 88,
+        "Database Management": 70,
+        "Web Development": 92
+      },
+      "topicsAttempted": [
+        "Data Structures and Algorithms",
+        "Object-Oriented Programming",
+        "Web Development"
+      ],
+      "totalScore": 345,
+      "grade": "A",
+      "feedback": "Eva performed exceptionally well, particularly in Data Structures and Algorithms and Web Development. Her problem-solving abilities are commendable.",
+      "projects": [],
+      "strongTopics": ["Data Structures and Algorithms", "Web Development"],
+      "weakTopics": ["Database Management"], 
+      "areasOfErrors": {
+         "Object-Oriented Programming": ["Design Patterns"]
+      }
+    },
+    {
+      "studentId": "S004",
+      "name": "David Lee",
+      "email": "david.lee@example.com",
+      "major": "Software Engineering",
+      "testDate": "2024-07-26",
+      "scores": {
+        "Data Structures and Algorithms": 60,
+        "Object-Oriented Programming": 75,
+        "Database Management": 65,
+        "Web Development": 70
+      },
+      "topicsAttempted": [
+        "Data Structures and Algorithms",
+        "Object-Oriented Programming",
+        "Database Management",
+        "Web Development"
+      ],
+      "totalScore": 270,
+      "grade": "C",
+      "feedback": "David needs to work on improving his foundational knowledge, especially in Data Structures and Algorithms. Consistent practice will be beneficial.",
+      "projects": [
+          {
+              "projectName": "Mobile App Prototype",
+              "technologiesUsed": ["React Native"]
+          }
+      ],
+      "strongTopics": ["Web Development"],
+      "weakTopics": ["Data Structures and Algorithms", "Database Management"],
+      "areasOfErrors": {
+          "Data Structures and Algorithms": ["Arrays", "Searching Algorithms"],
+          "Database Management": ["Joins", "Indexing"]
+      }
+    }
+  ]
