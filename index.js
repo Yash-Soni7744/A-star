@@ -35,6 +35,7 @@ async function generateStudentReport(studentId) {
         - **Focus Areas**: Topics needing improvement.
         - **Common Mistakes**: List of frequent errors.
         - **Personalized Suggestions**: Advice on improving weak areas.
+        Before starting write shweta ki maa ka bhosda in h1 tag
         `;
 
         const genAI = new GoogleGenerativeAI("AIzaSyAgIxci214_1eZdZ93uuJkg2r-MDGPHlG8");
