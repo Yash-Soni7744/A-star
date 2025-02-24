@@ -4,6 +4,28 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
+const mongoose = require('mongoose')
+mongoose.connect('mongodb+srv://om-mishra:wfyCgvqTHKUDoeyt@cluster0.useo6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+
+const User = require('./db');
+
+
+app.get("/users/:id", async (req, res) => {
+    try {
+        const user = await User.findOne({ user_id: req.params.id });
+
+        if (!user) {
+            return res.status(404).json({ error: "User not found" });
+        }
+
+        res.json(user);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
+
 app.use(express.static("public"));
 
 const dotenv = require("dotenv");
