@@ -1,37 +1,39 @@
 
 const express = require('express');
 const path = require('path');
+const dotenv = require("dotenv");
+
+dotenv.config();
 const app = express();
 const PORT = 3000;
 
+app.use(express.static("public"));
+//Database connection is here ---------------------------------------------------------
+
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://om-mishra:wfyCgvqTHKUDoeyt@cluster0.useo6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+// console.log('uri is:', process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI);
 
-const User = require('./db');
+const User = require("./db");
 
-
-app.get("/users/:id", async (req, res) => {
+app.get("/api/users/:id", async (req, res) => {
     try {
-        const user = await User.findOne({ user_id: req.params.id });
+        const user = await User.findOne({ "user_account.user_id": req.params.id }); // Find user by ID
 
         if (!user) {
             return res.status(404).json({ error: "User not found" });
         }
 
-        res.json(user);
+        res.json(user); // Send user data as JSON
     } catch (err) {
-        console.error(err);
+        console.error("Error fetching user:", err);
         res.status(500).json({ error: "Internal server error" });
     }
 });
 
 
-app.use(express.static("public"));
-
-const dotenv = require("dotenv");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const fs = require("fs");
-dotenv.config();
 
 async function generateStudentReport(studentId) {
     try {
@@ -61,7 +63,7 @@ async function generateStudentReport(studentId) {
         Before starting write OM KO CODING NAHI AATI in BOLD
         `;
 
-        const genAI = new GoogleGenerativeAI("AIzaSyAgIxci214_1eZdZ93uuJkg2r-MDGPHlG8");
+        const genAI = new GoogleGenerativeAI(process.env.API_KEY);
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
         const result = await model.generateContent(prompt);
@@ -85,6 +87,7 @@ app.get("/api/report/:studentId", async (req, res) => {
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
 });
+
 
 
 app.listen(PORT, () => {
