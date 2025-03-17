@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Report Dashboard</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 40px;
+        }
+        .card {
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            font-weight: 600;
+            border-bottom: 2px solid #007bff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .badge {
+            font-size: 0.9rem;
+            padding: 6px 10px;
+        }
+        .strong-topic {
+            background-color: #28a745;
+            color: white;
+        }
+        .weak-topic {
+            background-color: #dc3545;
+            color: white;
+        }
+        .ai-suggestions {
+            background-color: #e9f5ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center mb-4">A-star User Report Dashboard</h2>
+
+    <!-- Input Section -->
+    <div class="d-flex justify-content-center mb-4">
+        <input type="text" id="searchQuery" class="form-control w-50" placeholder="Enter User ID, Name, or Email">
+        <button class="btn btn-primary ms-2" onclick="fetchUserReport()">Get Report</button>
+    </div>
+
+    <!-- User Details -->
+    <div class="card p-3 mb-4">
+        <h4 class="section-title">👤 User Details</h4>
+        <p><strong>ID:</strong> <span id="userId">-</span></p>
+        <p><strong>Name:</strong> <span id="userName">-</span></p>
+        <p><strong>Email:</strong> <span id="userEmail">-</span></p>
+        <p><strong>Avatar:</strong> <img id="userAvatar" src="" alt="User Avatar" style="width: 50px; height: 50px; border-radius: 50%;"></p>
+    </div>
+
+    <!-- Performance Report -->
+    <div class="card p-3 mb-4">
+        <h4 class="section-title">📊 User Performance Report</h4>
+        
+        <h5>✅ Strong Topics:</h5>
+        <div id="strongTopics" class="mb-3"></div>
+
+        <h5>⚠️ Weak Topics:</h5>
+        <div id="weakTopics" class="mb-3"></div>
+    </div>
+
+    <!-- AI Suggestions -->
+    <div class="card p-3">
+        <h4 class="section-title">🤖 AI Suggestions</h4>
+        <div id="aiSuggestions" class="ai-suggestions"></div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- External Script -->
+<script src="script.js"></script>
+
+</body>
+</html>

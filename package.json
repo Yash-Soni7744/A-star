@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "axios": "^1.8.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1",
+    "node-cache": "^5.1.2",
+    "nodemon": "^3.1.9",
+    "openai": "^4.87.3",
+    "path": "^0.12.7",
+    "require": "^2.4.20"
+  }
+}
