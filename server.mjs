@@ -4,9 +4,9 @@ import mongoose from "mongoose";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import NodeCache from "node-cache"; 
 
-import User from "./db.js";
-import Submission from "./submissionModel.js";
-import Problem from "./problemModel.js";
+import User from "./db.mjs";
+import Submission from "./submissionModel.mjs";
+import Problem from "./problemModel.mjs";
 
 dotenv.config();
 
